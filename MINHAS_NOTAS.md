@@ -5,3 +5,9 @@
 - O index.html redireciona para o app-root, que será o app.component
 - No angular nós temos uma configuração de prefixo que todos os componentes devem seguir. No caso desse projeto o prefixo configurado é o "app"
 - No angular nós temos sistemas de módulos. Cada componente deve ser parte de um módulo, que estão no arquivo app.module.ts
+- No angular nós temos APIs que vão fornecer as ferramentas para interagir com os dados na DOM sem precisar usar o Javascript diretamente:
+  - (nada) => evento
+  - [nada] => propriedade de exibição. Note que na DOM ela pode até mudar mas a camada de dados não aceita a mudança
+  - [(nada)] => propriedade que poderá ser alterada
+
+- É bom tomar cuidado ao usar o EventEmitter porque o VsCode ou a IDE em questão poderia importar automaticamente o EventEmitter do módulo "stream". Garanta que o EventEmitter que você tem acesso é o do @angular/core
