@@ -23,13 +23,13 @@ constructor(private httpClient : HttpClient) {
   return this.httpClient.get<Array<Transferencia>>(this.url);
  }
 
- adicionar(transferencia: any) {
+ adicionar(transferencia: Transferencia)  : Observable<Transferencia>{
   this.hidratar(transferencia);
 
-  this.listaTransferencias.push(transferencia);
+  return this.httpClient.post<Transferencia>(this.url, transferencia);
  }
 
- private hidratar(transferencia : any){
+ private hidratar(transferencia : Transferencia){
   transferencia.data = new Date();
  }
 
