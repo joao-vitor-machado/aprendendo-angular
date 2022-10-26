@@ -11,3 +11,9 @@
   - [(nada)] => propriedade que poderá ser alterada
 
 - É bom tomar cuidado ao usar o EventEmitter porque o VsCode ou a IDE em questão poderia importar automaticamente o EventEmitter do módulo "stream". Garanta que o EventEmitter que você tem acesso é o do @angular/core
+
+- Podemos iterar na view usando a propriedade ngFor
+- Podemos utilizar as propriedades pipe "|" para definir formatos de data e de moeda. Para isso é necessário importar os modulos necessários para isso e adicionar nos providers. Tudo isso no arquivo app.module.ts
+
+- Podemos usar Ifs dentro das árvores de componentes HTML utilizando ngIf. E podemos referenciar a rendenização condicional utilizando um componente criado usando o ng-template e dando um #<nome> pra ele
+
